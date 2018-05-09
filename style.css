@@ -1,0 +1,1860 @@
+
+ @font-face { font-family: Bazar; src: url('Bazar.ttf'); } 
+
+
+
+*{
+
+	font-family: Bazar;
+}
+
+body, html{
+
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+
+#Wrapper{
+
+	display: grid;
+	grid-template-rows: 1.1fr 1.1fr 1fr 1fr 1000px;
+	grid-template-columns: 1fr;
+	grid-template-areas: "landing"
+						"areaone"
+						"Portfolio"
+						"MyBlog"
+						"contactMe";
+	height: 5000px;
+	width: 100%;
+	overflow-x: hidden;
+
+}
+
+#headBlock{
+
+	grid-area: landing;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 100px 0.7fr 1fr 1fr 3.5fr 1.5fr;
+	grid-template-areas: ". headOne headTwo headLogo headThree headFour ."
+	"dashedLine dashedLine dashedLine dashedLine dashedLine dashedLine dashedLine"
+	". . retroBanner retroBanner retroBanner . ."
+	" . headScript headScript headScript headScript headScript  . "
+	" . headerSlider headerSlider headerSlider headerSlider headerSlider . "
+	" . . greetingLast greetingLast greetingLast . .";
+
+	grid-column-gap: 10px;
+	height: 100%
+	width: 100%;
+	justify-content: center;
+	background-image: url('Slider section BG.png');
+	background-repeat: repeat;
+	background-size: 100%;
+	background-color: rgb(122,186,186);
+}
+
+
+#headBlock::after{
+
+	
+	content: "";
+	display: grid;
+	bottom: 20px;
+	position: absolute;
+	width: 100%;
+	border-top: 1px dashed rgba(0,0,0,0.25);
+    border-bottom: 1px dashed rgba(255,255,255,0.25);
+	justify-self: center;
+
+}
+
+.headBlockMenu{
+
+	cursor: pointer;
+}
+
+#headBlock div{
+
+	text-align: center;
+	align-self: center;
+	font-size: 20px;
+	color: #f9ebd9;
+	white-space: nowrap;
+
+}
+
+/* HEADBLOCK GRID */
+
+.headOne{
+	grid-area: headOne;
+}
+.headTwo{
+	grid-area: headTwo;
+}
+.headThree{
+	grid-area: headThree;
+}
+.headFour{
+	grid-area: headFour;
+}
+
+#dashedLine{
+
+	align-self: flex-start !important;
+	grid-area: dashedLine;
+	border-top: 1px dashed rgba(0,0,0,0.25);
+    border-bottom: 1px dashed rgba(255,255,255,0.25);
+	position: relative;
+}
+
+#dashedLine::after{
+
+	content: "";
+	display: grid;
+	top: 20px;
+	position: absolute;
+	width: 100%;
+	justify-self: center;
+    border-top: 1px dashed rgba(0,0,0,0.25);
+    border-bottom: 1px dashed rgba(255,255,255,0.25);
+    
+   
+}
+
+#retroBanner{
+
+
+	display: grid;
+	grid-area: retroBanner;
+	justify-self: center;
+	align-content: flex-start;
+	align-self: center;
+
+
+}
+
+#retroBanner img{
+		
+	display: grid;	
+	max-width: 400px;
+
+}
+
+
+#headLogo{
+
+	z-index: 100;
+	height: 150px;
+	width: 150px;
+	grid-area: headLogo;
+	justify-self: center;
+	align-self: flex-start;
+}
+
+#headScript{
+	position: relative;
+	grid-area: headScript;
+	max-width: 500px;
+	justify-self: center;
+	align-self: flex-start !important;
+	justify-content: center;
+	justify-self: center;
+
+}
+
+#headScript img{
+
+	max-width: 500px;
+}
+
+#headScript p{
+
+	align-self: center;
+	color: black;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+
+}
+
+.ribbonBalls{
+  display: none;
+}
+.ribbonBalls:not(*:root) { 
+  display: block;
+  position: absolute;
+}
+
+/*
+
+.ribbonBalls{
+	
+	position: absolute;
+
+	
+}
+*/
+
+
+
+.ribbonBalls.left{
+
+	transform: translateX(-100%);
+	top: 55%;
+	transform: translateY(-50%);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 100%;
+	left: -100px;
+
+}
+
+
+.ribbonBalls.right{
+
+
+
+	transform: translateX(100%);
+	top: 55%;
+	transform: translateY(-50%);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 100%;
+	right: -5%;
+}
+
+.ribBall{
+
+	width: 6px;
+	height: 6px;
+	background-color: #f9ebd9;
+	border-radius: 50%;
+
+}
+
+/* HEADER SLIDESHOW */
+
+.headerSlide{
+
+
+	grid-area: headerSlider;
+	display: grid;
+	position: relative;
+	top: 2%;
+	width: 100%;
+	height: 80%;
+	background-color: #e3dfd7;
+	justify-self: center;
+	align-self: flex-start !important;
+	border: 10px solid #fbfaf6;
+	border-bottom: 45px solid #fbfaf6;
+	background-size: 100% auto;
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+}
+
+#picSign{
+
+	position: relative;
+	color: black;
+	top: 98%;
+	overflow: hidden;
+
+
+}
+
+.halfCirc p{
+
+	font-size: 25px;
+	color: #383a3c;
+}
+
+.halfCirc.prev{
+
+	border-bottom-right-radius: 100px;
+  	border-top-right-radius: 100px;
+  	justify-content: flex-start;
+}
+
+.halfCirc.next{
+
+	border-bottom-left-radius: 100px;
+  	border-top-left-radius: 100px;
+  	right: 0;
+  	justify-content: flex-end;
+
+}
+
+.halfCirc{
+
+	display: grid;
+	position: absolute;
+	width: 25px;
+    height: 50px; /* as the half of the width */
+  	background-color: #fbfaf6;
+  	align-content: center;
+  	
+}
+
+#slideNext, #slidePrev{
+
+	cursor: pointer;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+
+}
+
+
+/* HEADER SLIDESHOW finished */
+
+#greeting{
+
+	grid-area: greetingLast;
+	display: grid;
+	align-self: center;
+	justify-content: center;
+	justify-self: center;
+	line-height: 0.1em;
+}
+
+/* ABOUT ME CSS COMES HERE */
+
+
+#About{
+
+	display: grid;
+	position: relative;
+	grid-area: areaone;
+	background-color: #e1ddcd;
+	background-image: url("About section BG.png");
+	background-repeat: repeat;
+	background-size: 100%;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 50px 0.5fr 40px 0.5fr 4.5fr;
+	grid-template-areas: ". . . . . . ."
+	" . . AboutTitle AboutTitle AboutTitle . ."
+	". . separator separator separator . ."
+	". . whoAmI whoAmI whoAmI . ."
+	". aboutColumns aboutColumns aboutColumns aboutColumns aboutColumns .";
+
+
+	
+
+}
+
+#About::before{
+
+	
+	content: "";
+	display: grid;
+	top: 20px;
+	position: absolute;
+	width: 100%;
+	border-top: 1px dashed rgba(0,0,0,0.25);
+    border-bottom: 1px dashed rgba(255,255,255,0.25);
+	justify-self: center;
+
+}
+
+#About::after{
+
+	
+	content: "";
+	display: grid;
+	bottom: 20px;
+	position: absolute;
+	width: 100%;
+	border-top: 1px dashed rgba(0,0,0,0.25);
+    border-bottom: 1px dashed rgba(255,255,255,0.25);
+	justify-self: center;
+
+}
+
+/*ABOUT HEADER*/
+
+#aboutTitle{
+
+	display: grid;
+	grid-area: AboutTitle;
+	justify-self: center;
+	align-self: center;
+
+	
+}
+
+	#aboutTitle img{
+	max-width: 350px;
+
+}
+
+.threeX{
+
+	font-family: Syncopate;
+	font-weight: 700;
+	grid-area: Xthree;
+	letter-spacing: 1.5px;
+	text-align: center;
+	align-self: center;
+}
+
+.separator{
+
+	position: relative;
+	grid-area: separator;
+	font-family: Syncopate;
+	display: grid;
+	align-self: center;
+	align-content: center;
+	text-align: center;
+	font-size: 9pt;
+	grid-template-columns: 1fr 20px 70px 20px 1fr;
+	grid-template-areas: ". leftStick Xthree rightStick .";
+}
+
+
+
+.sepLine{
+
+	align-self: center;
+	background-color: black;
+	height: 2px;
+	width: 30px;
+
+}
+
+.leftSep{
+
+	justify-self: flex-end;
+	grid-area: leftStick;
+}
+
+
+.rightSep{
+
+
+	grid-area: rightStick;
+}
+
+.whoAmI{
+
+	display: grid;
+	grid-area: whoAmI;
+	justify-self: center;
+	font-family: Oswald;
+	font-size: 16px;
+	align-self: flex-start;
+	margin: 0;
+	white-space: nowrap;
+	
+}
+
+/*/ABOUT HEADER*/
+
+
+/* ABOUT COLUMNS */
+
+.columns{
+
+	grid-area: aboutColumns;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	text-align: center;
+	grid-column-gap: 5%;
+
+}
+
+.columns div img{
+
+	height: 160px;
+	width: 160px;
+}
+
+.columns div p{
+
+	font-family: "Roboto Slab";
+
+	font-size: 18px;
+}
+
+.innerSepa{
+
+
+	position: absolute;
+	height: 4px;
+	background-color: black;
+	width: 5%;
+	transform: translateX(-50%);
+}
+
+.innerPara{
+
+	margin-top: 30%;
+	align-self: center;
+	font-size: 16px !important;
+	font-family: "Roboto Slab";
+	color: rgb(56, 58, 60);
+	line-height: 1.6;
+	text-align: left;
+
+ 
+}
+
+
+/* PORTFOLIO SECTION */
+
+
+#Portfolio{
+
+
+	grid-area: Portfolio;
+	display: grid;
+	background-image: url("Portfolio section BG.png");
+	background-size: 100%;
+	background-repeat: repeat;
+	position: relative;
+	justify-content: center;
+	background-color: #de8664;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 50px 0.5fr 40px 0.5fr 100px 3.5fr 1fr;
+	grid-template-areas: ". . . . . . ."
+	 " . . PortTitle PortTitle PortTitle . ."
+	 ". . separatorPort separatorPort separatorPort . ."
+	 ". . whoAmITwo whoAmITwo whoAmITwo . ."
+	 ". portFilter portFilter portFilter portFilter portFilter ."
+	 " . portBoxes portBoxes portBoxes portBoxes portBoxes ."
+	 ". . . portMore . . . ";
+
+
+/* Portfolio TITLE */
+
+}
+
+#Portfolio::before{
+
+	
+	content: "";
+	display: grid;
+	top: 20px;
+	position: absolute;
+	width: 100%;
+	border-top: 1px dashed rgba(0,0,0,0.25);
+    border-bottom: 1px dashed rgba(255,255,255,0.25);
+	justify-self: center;
+
+}
+
+#Portfolio::after{
+
+	
+	content: "";
+	display: grid;
+	bottom: 20px;
+	position: absolute;
+	width: 100%;
+	border-top: 1px dashed rgba(0,0,0,0.25);
+    border-bottom: 1px dashed rgba(255,255,255,0.25);
+	justify-self: center;
+
+}
+
+
+#portTitle{
+
+	display: grid;
+	grid-area: PortTitle;
+	justify-self: center;
+	align-self: center;
+
+	
+}
+
+	#portTitle img{
+	max-width: 350px;
+
+}
+
+.threeXPort{
+
+	font-family: Syncopate;
+	font-weight: 700;
+	font-size: 9pt;
+	grid-area: Xthree;
+	text-align: center;
+	align-self: center;
+}
+
+.separatorPort{
+
+	position: relative;
+	grid-area: separatorPort;
+	font-family: Syncopate;
+	display: grid;
+	align-self: center;
+	align-content: center;
+	text-align: center;
+	font-size: 15pt;
+	grid-template-columns: 1fr 20px 70px 20px 1fr;
+	grid-template-areas: ". leftStick Xthree rightStick .";
+
+}
+
+
+
+.sepLinePort{
+
+	align-self: center;
+	background-color: black;
+	height: 2px;
+	width: 30px;
+
+}
+
+.leftSepPort{
+
+	justify-self: flex-end;
+	grid-area: leftStick;
+}
+
+
+.rightSepPort{
+
+
+	grid-area: rightStick;
+}
+
+.whoAmI2{
+
+	display: grid;
+	grid-area: whoAmITwo;
+	justify-self: center;
+	font-family: Oswald;
+	font-size: 16px;
+	align-self: flex-start;
+	margin: 0;
+	white-space: nowrap;
+	
+}
+
+/* Portfolio filter*/
+
+
+
+#filter{
+
+
+	grid-area: portFilter;
+	display: grid;
+	grid-template-columns: 1fr 10fr;
+	grid-template-rows: 100px 1fr;
+	grid-column-gap: 3%;
+	align-content: center;
+
+
+
+}
+
+#filter p{
+
+display: inline;
+font-family: Oswald;
+font-size: 18px;
+margin: 0;
+align-self: center;
+
+
+
+}
+
+.filters{
+
+	list-style: disc;
+}
+
+.filters li{
+
+	z-index: 100;
+	position: relative;
+	float: left;
+	display: grid;
+	margin: 0 2%;
+	padding: 4px;
+	padding-left: 12px;
+	list-style: disc;
+	color: black;
+	background-color: white;
+	height: 14px;
+	background-size: auto 21px;
+	box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+	align-content: center;
+	justify-content: center;
+	margin-right: 2%;
+	font-size: 2pt;
+	
+}
+
+.filters li div p{
+
+	position: relative;
+	font-size: 11pt !important;
+	align-self: center;
+	cursor: pointer;
+
+
+}
+
+.filters li div p::before{
+
+	align-self: center;
+	position: absolute;
+	content: "●";
+	left: -15px;
+	transform: translateY(-50%);
+	top: 50%;
+	font-size: 7pt;
+
+
+}
+
+
+
+
+.filters li::before{
+
+	content: "";
+	position: absolute;
+	right: 100%;
+	top: 0;
+	width: 0;
+	height: 0;
+	border-top: 11px solid transparent;
+	border-right: 14px solid white;
+	border-bottom: 11px solid transparent;
+	margin: 0;
+
+}
+
+
+.filterBy{
+
+
+	padding-right: 20px;
+	white-space: nowrap;
+	padding: 0;
+	margin: 0;
+
+}
+
+.filters{
+
+
+
+	margin: 0;
+	padding: 0;
+	align-self: center;
+
+	
+
+}
+
+
+
+/* Portfolio Boxes */
+
+
+
+.portBoxes{
+
+
+	grid-area: portBoxes;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-column-gap: 3%;
+	grid-row-gap: 1%;
+
+}
+
+.portBox{
+
+	display: grid;
+	position: relative;
+	width: 100%;
+	height: 70%;
+	background-color: #e3dfd7;
+	border: 4px solid white;
+	border-bottom: 50px solid white;
+	border-radius: 2%;
+	justify-self: center;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;	
+	transition: all 0.4s ease-in-out;
+	transition-property: margin-left, opacity;
+	
+	
+}
+
+
+#galFun{
+
+	background-image: url('galery.jpg');
+}
+
+#vimReel{
+
+	background-image: url('reel.jpg');
+
+}
+
+#oldCam{
+
+
+	background-image: url('oldcam.jpg');
+
+}
+
+#project{
+
+	background-image: url('doc.jpg');
+
+}
+
+#youTube{
+
+	background-image: url('youtube.jpg');
+
+}
+
+#extLink{
+
+
+	background-image: url('repair.jpg');
+}
+
+#lightImg{
+
+	background-image: url('poster.jpg');
+
+}
+
+#darkTemp{
+
+	background-image: url('last.jpg');	
+}
+
+.portBox p{
+
+	display: grid;
+	position: absolute;
+	bottom: -50px;
+	right: 50%;
+	transform: translateX(50%); 
+	font-size: 8pt;
+	white-space: nowrap;
+	font-family: "Roboto Slab";
+	font-weight: 700;
+	color: #383a3c;
+	z-index: 100;
+
+
+}
+
+.portBox span{
+
+	
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	position: absolute;
+	bottom: -25px;
+	right: 50%;
+	border: 10px solid transparent;
+	border-radius: 50%;
+	transform: translateX(50%); 
+	transition: bottom 0.3s ease-in-out;
+
+}
+
+
+.portBox:hover span{
+
+	bottom: -22px;
+
+}
+
+.portMore{
+
+	position: relative;
+	display: grid;
+	grid-area: portMore;
+	align-self: center;
+	text-align: center;
+	
+}
+
+.portMore p{
+
+
+	font-family: Oswald;
+	font-size: 12pt;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+
+
+}
+
+
+.portMore:hover::before{
+
+width: 40%;
+
+}
+
+	
+
+.portMore::before{
+
+	content: "";
+	position: absolute;
+	background-color: black;
+	width: 20%;
+	height: 3px;
+	right: 50%;
+	bottom: 100%;
+	transform: translateX(50%);
+	transition: width 0.2s ease-in-out;
+	
+}
+
+.portBoxActive{
+
+
+	background-color: gray !important;
+}
+
+.portBoxActive::before{
+
+
+	border-right-color: gray !important;
+}
+
+.portBoxAnimation{
+
+
+	margin-left: -30px; 
+	opacity: 0;
+}
+
+.portBoxesAnimation{
+
+	overflow: visible;
+}
+
+.portBoxHidden{
+
+
+	display: none;
+	opacity: 0;
+}
+
+
+
+/* MY BLOG SECTION HERE ===============================================================*/
+
+
+
+
+.myBlog{
+
+	grid-area: MyBlog;
+	background-image: url("Blog section BG.png");
+	display: grid;
+	position: relative;
+	background-repeat: repeat;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 50px 0.5fr 40px 0.5fr 3.5fr 0.5fr;
+	grid-template-areas: ". . . . . . ."
+	 " . . BlogTitle  BlogTitle BlogTitle . ."
+	 ". . separatorBlog separatorBlog separatorBlog . ."
+	 ". . whoAmIThree whoAmIThree whoAmIThree . ."
+	 ". newsSec newsSec newsSec newsSec newsSec ."
+	 ". . . blogMore . . . ";
+
+
+
+}
+
+.myBlog::before{
+
+	
+	content: "";
+	display: grid;
+	top: 20px;
+	position: absolute;
+	width: 100%;
+	border-top: 1px dashed rgba(0,0,0,0.25);
+    border-bottom: 1px dashed rgba(255,255,255,0.25);
+	justify-self: center;
+
+}
+
+.myBlog::after{
+
+	
+	content: "";
+	display: grid;
+	bottom: 20px;
+	position: absolute;
+	width: 100%;
+	border-top: 1px dashed rgba(0,0,0,0.25);
+    border-bottom: 1px dashed rgba(255,255,255,0.25);
+	justify-self: center;
+}
+
+#myBlogTitle{
+
+	display: grid;
+	grid-area: BlogTitle;
+	justify-self: center;
+	align-self: center;
+
+	
+}
+
+#myBlogTitle img{
+	max-width: 350px;
+
+}
+
+.newImg{
+
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#obsWheel{
+
+	background-image: url('wheel.jpg');
+	
+}
+
+#roadPic{
+
+
+	background-image: url('road.jpg');
+}
+
+#gasoline{
+
+	background-image: url('gasoline.jpg');
+}
+
+.threeXBlog{
+
+	font-family: Syncopate;
+	font-weight: 700;
+	font-size: 9pt;
+	grid-area: Xthree;
+	text-align: center;
+	align-self: center;
+	color: black;
+}
+
+.separatorMyBlog{
+
+	position: relative;
+	grid-area: separatorBlog;
+	font-family: Syncopate;
+	display: grid;
+	align-self: center;
+	align-content: center;
+	text-align: center;
+	font-size: 15pt;
+	grid-template-columns: 1fr 20px 70px 20px 1fr;
+	grid-template-areas: ". leftStick Xthree rightStick .";
+
+}
+
+
+
+.leftSepBlog{
+
+	align-self: center;
+	background-color: black;
+	height: 2px;
+	width: 30px;
+
+}
+
+.leftSepBlog{
+
+	justify-self: flex-end;
+	grid-area: leftStick;
+}
+
+
+.rightSepBlog{
+
+
+	grid-area: rightStick;
+}
+
+.whoAmI3{
+
+	display: grid;
+	grid-area: whoAmIThree;
+	justify-self: center;
+	font-family: Oswald;
+	color: black;
+	font-size: 16px;
+	align-self: flex-start;
+	margin: 0;
+	white-space: nowrap;
+	
+}
+
+.sepLineBlog{
+
+	align-self: center;
+	background-color: black;
+	height: 2px;
+	width: 30px;
+
+}
+
+.newsSec{
+
+	grid-area: newsSec;
+	display: grid;
+	position: relative;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-row-gap: 2%;
+	max-height: 100%;
+}
+
+.blogList{
+
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-column-gap: 2%;
+}
+
+
+.blogMore{
+
+	position: relative;
+	align-self: center;
+	text-align: center;
+	grid-area: blogMore;
+	white-space: nowrap;
+}
+
+.blogMore p{
+
+	font-family: Oswald;
+	font-size: 12pt;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+
+.blogMore::before{
+
+	content: "";
+	position: absolute;
+	background-color: black;
+	width: 20%;
+	height: 3px;
+	right: 50%;
+	bottom: 100%;
+	transform: translateX(50%);
+	transition: width 0.2s ease-in-out;
+	
+}
+
+.blogMore:hover::before{
+
+width: 40%;
+
+}
+
+.newsPart{
+
+	font-size: 8pt;
+}
+
+.newImg{
+
+	background-color: #e3dfd7;
+	border: 2px solid white;
+	border-radius: 4px;
+	width: 90%;
+	height: 90%;
+}
+
+.headerBlog h1{
+
+	font-family: "Roboto Slab" !important;
+}
+
+.headerBlog p{
+
+	font-family: Oswald;
+}
+
+.headerBlog div{
+
+	position: relative;
+
+}
+
+.headerBlog span{
+
+
+	position: absolute;
+	right: 0;
+	top: -9%;
+	font-family: Oswald;
+}
+
+.contentBlog p{
+
+	font-family: Oswald;
+	font-size: 10pt;
+	line-height: 1.5em;
+}
+
+.contentBlog p span{
+
+	font-family: Oswald;
+	font-size: 7pt;
+
+}
+
+
+
+/* CONTACT ME SECTION                                                =====================*/
+
+
+.contactMe{
+
+
+	background-image: url("Contact section BG.png");
+	background-color: #50545b;
+	background-repeat: repeat;
+	display: grid;
+	grid-area: contactMe;
+	position: relative;
+	background-repeat: repeat;
+	justify-content: center;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 50px 0.5fr 40px 0.5fr 3fr 1.5fr 0.5fr;
+	grid-template-areas: ". . . . . . ."
+	 " . . BlogTitle  BlogTitle BlogTitle . ."
+	 ". . separatorBlog separatorBlog separatorBlog . ."
+	 ". . whoAmIThree whoAmIThree whoAmIThree . ."
+	 ". . inputForm inputForm inputForm . ."
+	 ". . socLinks socLinks socLinks . . "
+	 ". . . . . . .";
+
+
+}
+
+.contactMe::before{
+
+	
+	content: "";
+	display: grid;
+	top: 20px;
+	position: absolute;
+	width: 100%;
+	border-top: 1px dashed rgba(0,0,0,0.25);
+    border-bottom: 1px dashed rgba(255,255,255,0.25);
+	justify-self: center;
+
+}
+
+.contactMe::after{
+
+	
+	content: "";
+	display: grid;
+	bottom: 20px;
+	position: absolute;
+	width: 100%;
+	border-top: 1px dashed rgba(0,0,0,0.25);
+    border-bottom: 1px dashed rgba(255,255,255,0.25);
+	justify-self: center;
+
+}
+
+#contactTitle{
+
+	display: grid;
+	grid-area: BlogTitle;
+	justify-self: center;
+	align-self: center;
+
+	
+}
+
+	#contactTitle img{
+	max-width: 350px;
+
+}
+
+.threeXContact{
+
+	font-family: Syncopate;
+	font-weight: 700;
+	font-size: 9pt;
+	grid-area: Xthree;
+	text-align: center;
+	align-self: center;
+	color: #f6edd8;
+}
+
+.separatorContact{
+
+	position: relative;
+	grid-area: separatorBlog;
+	font-family: Syncopate;
+	display: grid;
+	align-self: center;
+	align-content: center;
+	text-align: center;
+	font-size: 15pt;
+	grid-template-columns: 1fr 20px 70px 20px 1fr;
+	grid-template-areas: ". leftStick Xthree rightStick .";
+
+}
+
+
+
+.leftSepContact{
+
+	align-self: center;
+	background-color: black;
+	height: 2px;
+	width: 45px;
+
+}
+
+.leftSepContact{
+
+	justify-self: flex-end;
+	grid-area: leftStick;
+}
+
+
+.rightSepContact{
+
+
+	grid-area: rightStick;
+}
+
+.whoAmI4{
+
+	display: grid;
+	grid-area: whoAmIThree;
+	justify-self: center;
+	font-family: Oswald;
+	color: #f6edd8;
+	font-size: 16px;
+	align-self: flex-start;
+	margin: 0;
+	white-space: nowrap;
+	
+}
+
+.sepLineContact{
+
+	align-self: center;
+	background-color: #f6edd8;
+	height: 2px;
+	width: 30px;
+
+}
+
+#inputForm{
+
+	grid-area: inputForm;
+	display: grid;
+	align-content: center;
+	position: relative;
+	grid-row-gap: 10px;
+
+
+}
+
+#inputForm input{
+
+	border: 1px solid transparent;
+	border-radius: 4px;
+	width: 100%;
+	padding: 10px 2px;
+
+
+
+}
+
+
+
+
+#inputForm #submitForm{
+
+	position: relative;
+	top: 0;
+	width: 100px;
+	background-color: #fcfaf7;
+	cursor: pointer;
+}
+
+.socLinks{
+
+	position: relative;
+	display: grid;
+	grid-area: socLinks;
+	align-self: center;
+	justify-content: center;
+	text-align: center;
+	color: #f6edd8;
+	margin-top: 5%;
+	/*
+	grid-template-rows: 1fr 1fr;
+	*/
+
+}
+
+.contactMore p{
+
+
+	font-family: Bazar;
+
+
+
+}
+
+.contactMore{
+
+	align-self: center;
+	position: relative;
+
+
+
+}
+
+#inputForm #textArea{
+
+	text-justify: inter-word;
+	vertical-align: text-top;
+	resize: none;
+	padding: 3% 2px;
+	height: 130px;
+	width: 100%;
+	margin: 0;
+	border-radius: 4px;
+	border: 1px solid transparent;
+
+
+}
+
+.contactMore::after{
+
+	content: "";
+	position: absolute;
+	background-color: #f6edd8;
+	width: 40px;
+	height: 3px;
+	right: 50%;
+	bottom: 0;
+	transform: translateX(50%);
+	
+}
+
+.links{
+
+	position: relative;
+	
+	display: grid;
+	grid-column-gap: 2%;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	align-content: center;
+	justify-content: center;
+
+}
+
+.innerLink{
+
+	margin-top: 40px;
+	display: grid;
+	align-self: flex-start;
+}
+
+.links img{
+
+
+	width: 100%;
+	height: auto;
+
+}
+
+
+
+/* MEDIA QUERIES  ====================== ======================== ====================== ================== */
+
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+
+#headScript .ribbonBalls{
+
+	display: none;
+
+}
+
+
+
+#Wrapper{
+
+	overflow: visible;
+	max-width: 100%;
+
+}
+
+
+.columns{
+
+	grid-template-columns: 1fr;
+	grid-row-gap: 2%;
+	grid-column-gap: 5%;
+
+	}
+
+.innerPara{
+
+	margin-top: 5%;
+	margin-bottom: 5%;
+	text-align: center;
+
+}
+
+#About{
+
+
+	grid-template-rows: 50px 0.5fr 60px 0.3fr 6.5fr;
+	grid-template-areas: ". . . . . . ."
+	" . . AboutTitle AboutTitle AboutTitle . ."
+	". . separator separator separator . ."
+	". . whoAmI whoAmI whoAmI . ."
+	"aboutColumns aboutColumns aboutColumns aboutColumns aboutColumns aboutColumns aboutColumns";
+	overflow: visible;
+
+}
+
+#Portfolio{
+
+	height: 1600px;
+	grid-template-columns: 0.1fr 1fr 1fr 1fr 1fr 1fr 0.1fr;
+	grid-template-rows: 50px 0.5fr 60px 0.3fr 100px 5.5fr 1fr;
+	grid-template-areas: ". . . . . . ."
+	 " . . PortTitle PortTitle PortTitle . ."
+	 ". . separatorPort separatorPort separatorPort . ."
+	 ". . whoAmITwo whoAmITwo whoAmITwo . ."
+	 ". portFilter portFilter portFilter portFilter portFilter ."
+	 " . portBoxes portBoxes portBoxes portBoxes . "
+	 ". . . portMore . . . ";
+}
+
+.portBoxes{
+
+
+	
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 3%;
+	grid-row-gap: 5%;
+
+
+}
+
+.portBox p{
+
+
+	font-size: 5pt;
+}
+
+.portBox{
+
+
+	height: 150px;
+	width: 100%;
+}
+
+.contactMe{
+
+	grid-template-rows: 50px 0.5fr 40px 0.5fr 2fr 1.5fr 50px;
+	grid-template-areas: ". . . . . . ."
+	 " . . BlogTitle  BlogTitle BlogTitle . ."
+	 ". . separatorBlog separatorBlog separatorBlog . ."
+	 ". . whoAmIThree whoAmIThree whoAmIThree . ."
+	 ". . inputForm inputForm inputForm . ."
+	 ". socLinks socLinks socLinks socLinks socLinks . "
+	 ". . . . . . .";
+}
+
+.links img{
+
+	width: 70px;
+	height: auto;
+
+}
+
+.myBlog{
+
+	height: 1200px;
+}
+
+
+.filters li div p{
+
+	position: relative;
+	font-size: 6pt !important;
+	align-self: center;
+
+
+}
+
+
+}
+
+
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+
+	#Portfolio{
+
+		height: 1000px;
+		grid-template-columns: 0.1fr 1fr 1fr 1fr 1fr 1fr 0.1fr;
+		grid-template-rows: 50px 0.5fr 60px 0.5fr 100px 3.5fr 1fr;
+		grid-template-areas: ". . . . . . ."
+		 " . . PortTitle PortTitle PortTitle . ."
+		 ". . separatorPort separatorPort separatorPort . ."
+		 ". . whoAmITwo whoAmITwo whoAmITwo . ."
+		 ". portFilter portFilter portFilter portFilter portFilter ."
+		 " portBoxes portBoxes portBoxes portBoxes portBoxes portBoxes "
+		 ". . . portMore . . . ";
+	}
+
+	#headScript .ribbonBalls{
+
+	display: none;
+
+	}
+
+	#Wrapper{
+
+		overflow: visible;
+		display: grid;
+		grid-template-rows: 1.1fr 1.4fr 1fr 1fr 0.5fr;
+		grid-template-columns: 1fr;
+		height: 5000px;
+		width: 100%;
+
+	}
+	
+	
+
+	.columns{
+
+	grid-area: aboutColumns;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-row-gap: 2%;
+	text-align: center;
+	grid-column-gap: 5%;
+
+	}
+
+
+	.innerPara{
+
+	margin-top: 10%;
+	margin-bottom: 15%;
+	text-align: center;
+
+	}
+
+	.portBoxes{
+
+
+	
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-column-gap: 3%;
+	grid-row-gap: 15%;
+
+
+}
+
+	.portBox p{
+
+
+		font-size: 7pt;
+	}
+
+	.contactMe{
+
+	grid-template-rows: 50px 0.5fr 40px 0.5fr 2fr 1.5fr 50px;
+	grid-template-areas: ". . . . . . ."
+	 " . . BlogTitle  BlogTitle BlogTitle . ."
+	 ". . separatorBlog separatorBlog separatorBlog . ."
+	 ". . whoAmIThree whoAmIThree whoAmIThree . ."
+	 ". . inputForm inputForm inputForm . ."
+	 ". . socLinks socLinks socLinks . . "
+	 ". . . . . . .";
+	}
+
+	.links img{
+
+	width: 70px;
+	height: auto;
+
+	}
+
+	.links{
+
+		justify-content: center;
+		align-self: center;
+		align-content: center;
+		justify-self: center;
+	}
+
+
+
+	.myBlog{
+
+		height: 1200px;
+	}
+
+	.filters li div p{
+
+		position: relative;
+		font-size: 7pt !important;
+		align-self: center;
+
+	}
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+
+	#Wrapper{
+
+		overflow: default;
+	}
+
+	#About{
+
+		grid-template-columns: 0.1fr 1fr 1fr 1fr 1fr 1fr 0.1fr;
+		grid-template-areas: ". . . . . . ."
+		" . . AboutTitle AboutTitle AboutTitle . ."
+		". . separator separator separator . ."
+		". . whoAmI whoAmI whoAmI . ."
+		". aboutColumns aboutColumns aboutColumns aboutColumns aboutColumns .";
+
+	}
+
+	
+
+	.portBox p{
+
+
+		font-size: 7pt;
+	}
+
+	.links img{
+
+
+	width: 70px;
+	height: auto;
+
+	}
+
+	.links{
+
+
+	grid-column-gap: 0%;
+	
+	}
+
+	
+
+	.filters li div p{
+
+		position: relative;
+		font-size: 7pt !important;
+		align-self: center;
+
+	}
+
+
+
+}
+
+
+@media only screen and (min-width: 992px) {
+
+
+	#About{
+
+		grid-template-areas: ". . . . . . ."
+		" . . AboutTitle AboutTitle AboutTitle . ."
+		". . separator separator separator . ."
+		". . whoAmI whoAmI whoAmI . ."
+		". aboutColumns aboutColumns aboutColumns aboutColumns aboutColumns .";
+
+	}
+
+	.portBox p{
+
+
+		font-size: 7pt;
+	}
+
+	
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+
+
+	.portBox p{
+
+
+		font-size: 8pt;
+	}
+
+
+}
+
