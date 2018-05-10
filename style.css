@@ -302,6 +302,8 @@ body, html{
   	background-color: #fbfaf6;
   	align-content: center;
   	align-self: center;
+  	justify-content: center;
+  	justify-self: center;
   	
 }
 
