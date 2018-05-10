@@ -282,6 +282,8 @@ body, html{
   	border-top-right-radius: 100px;
   	justify-content: flex-start;
   	align-self: center;
+  	top: 50%;
+  	transform: translateY(-50%);
 }
 
 .halfCirc.next{
@@ -291,6 +293,8 @@ body, html{
   	right: 0;
   	justify-content: flex-end;
   	align-self: center;
+  	top: 50%;
+  	transform: translateY(-50%);
 
 
 }
