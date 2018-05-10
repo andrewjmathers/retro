@@ -289,7 +289,7 @@ body, html{
   	border-top-left-radius: 100px;
   	right: 0;
   	justify-content: flex-end;
-
+  	
 
 }
 
@@ -301,9 +301,6 @@ body, html{
     height: 50px; /* as the half of the width */
   	background-color: #fbfaf6;
   	align-content: center;
-  	align-self: center;
-  	justify-content: center;
-  	justify-self: center;
   	
 }
 
