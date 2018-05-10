@@ -281,6 +281,7 @@ body, html{
 	border-bottom-right-radius: 100px;
   	border-top-right-radius: 100px;
   	justify-content: flex-start;
+  	align-self: center;
 }
 
 .halfCirc.next{
@@ -289,7 +290,8 @@ body, html{
   	border-top-left-radius: 100px;
   	right: 0;
   	justify-content: flex-end;
-  	
+  	align-self: center;
+
 
 }
 
